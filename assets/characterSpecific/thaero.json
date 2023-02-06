@@ -1,0 +1,28 @@
+{
+  "trollian": {
+    "user": {
+      "name": "untidyFunctions",
+      "color": [113, 160, 32]
+    },
+    "quirks": [
+      ["'", ""],
+      ["\\.\\.\\.[a-zA-Z]+", " [$&]"],
+      ["\\.\\.\\.( |$)", "(...);$1"],
+      ["--", "--;"],
+      ["\\.( |$)", "();$1"],
+      [",( |$)", "();$1"],
+      ["\\?\\?", "(??);"],
+      ["\\?( |$)", "(? :);$1"],
+      ["( |^)([a-zA-Z]+)!", "$1!$2(!);"]
+    ],
+    "testDialogue": [
+      "Heya!",
+      "What's up?",
+      "I'm Thaero, It's... nice to meet you, haha--",
+      "I like rhythm games, having good dreams and... not dying.",
+      "I also have a cool friend! Her name is Madhie and we're basically best buds. No, we don't hate each other.",
+      "Oh, also, a typing quirk that mirrors ECMAScript syntax, which goes with this whole theme I have with programming and logic. Cool, huh?",
+      "I'm learning ~ATH - I've lost, like... 5 computers from that damn thing, but I recently upgraded to an explosion-proof computer."
+    ]
+  }
+}
