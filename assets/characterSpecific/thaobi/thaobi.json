@@ -1,24 +1,23 @@
 {
   "general": {
-    "mainColor": "rgb(165, 255, 0)",
-    "fullName": "Thaero Rhange",
+    "mainColor": "rgb(255, 184, 0)",
+    "fullName": "Thaobi Rhange",
     "description": [
-      "Thaero is my main OC. He's basically my sona, if I was stupid, dumb, and a troll.",
-      "Sorry, man.",
-      "Anyway, he's basically a grey human, as they say in the Homestuck fandom. ",
-      "I haven't read enough of Act 5+ to really understand the effects of Trolls within the Homestuck universe, but I'm assuming it's quite a bit.",
-      "I don't care, though."
+      "Thaobi is a insane little guy who doesn't know how to stop his tyranny.",
+      "He does a lot of art. Art is kind of his favourite thing ever. His scrawlings are insane, terror-inducing, uhh... pretty good, actually?",
+      "He is a fusion of Obi and Thaero."
     ],
     "owners": [
-      ["https://meowcatheorange.github.io/", "MeowcaTheoRange"]
+      ["https://meowcatheorange.github.io/", "MeowcaTheoRange"],
+      ["https://twitter.com/obsiv_x", "ObsivX"]
     ],
-    "age": 17,
+    "age": 17.5,
     "pronouns": [
-      ["he", "him"]
+      ["they", "them"]
     ],
     "gender": "Male",
-    "sign": ["Lepio", "Olive"],
-    "species": "Troll",
+    "sign": ["???", "Rust-ish"],
+    "species": "Troll-human fusion",
     "likes": [
       ["Gruber", "likes"]
     ]
@@ -58,26 +57,25 @@
   },
   "css": {
     "customVars": [
-      ["--comma-url", "url(assets/characterSpecific/thaero/comma.png)"],
-      ["--bracket-url-left", "url(assets/characterSpecific/thaero/bracket_left.png)"],
-      ["--bracket-url-right", "url(assets/characterSpecific/thaero/bracket_right.png)"]
+      ["--comma-url", "url(assets/characterSpecific/thaobi/comma.png)"],
+      ["--bracket-url-left", "url(assets/characterSpecific/thaobi/bracket_left.png)"],
+      ["--bracket-url-right", "url(assets/characterSpecific/thaobi/bracket_right.png)"]
     ]
   },
   "trollian": {
     "user": {
-      "name": "untidyFunctions",
-      "color": "rgb(113, 160, 32)"
+      "name": "untidyArtistry",
+      "color": "rgb(119, 89, 10)"
     },
     "quirks": [
       ["'", ""],
-      ["\\.\\.\\.[a-zA-Z]+", " [$&]"],
-      ["\\.\\.\\.( |$)", "(...);$1"],
-      ["--", "--;"],
-      ["\\.( |$)", "();$1"],
-      [",( |$)", "();$1"],
-      ["\\?\\?", "(??);"],
-      ["\\?( |$)", "(? :);$1"],
-      ["( |^)([a-zA-Z]+)!", "$1!$2(!);"]
+      ["\\.", "..."],
+      [",", ",,,"],
+      ["\\?", "?[exc]"],
+      ["!", "!?"],
+      ["\\[exc\\]", "!"],
+      ["^", "🖌️ "],
+      ["$", " 🖌️"]
     ]
   },
   "inventory": {

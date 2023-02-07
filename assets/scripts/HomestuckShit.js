@@ -3,7 +3,7 @@ async function setTrollian(trollian) {
 	var trolltags = document.querySelectorAll("trolltag");
 	trolltags.forEach((v) => {
 		var trollshort = shortenTrollTag(trollian.user.name);
-		v.style.color = "rgb(" + trollian.user.color.join(", ") + ")";
+		v.style.color = trollian.user.color;
 		v.innerHTML = `${trollian.user.name} [${trollshort}]`;
 	})
 	var dialogue = document.querySelectorAll("dialogue");
@@ -15,7 +15,7 @@ async function setTrollian(trollian) {
 		}
 
 		var trollshort = shortenTrollTag(trollian.user.name);
-		v.style.color = "rgb(" + trollian.user.color.join(", ") + ")";
+		v.style.color = trollian.user.color;
 		v.innerHTML = `${trollshort}: ${v.innerHTML}`;
 	})
 }
@@ -37,11 +37,11 @@ function generateInventory(inventory) {
 		<div class="icon-minecraft icon-minecraft-${object[0]}">${object[1] ?? ""}</div>
 ` : ""}</div>`;
 	})
-	inventory.color.forEach((color) => {
-		document.querySelector("#inventory_color").innerHTML += `<div class="slot">
-	<div class="colour" style="background-color: ${color}"></div>
-</div>`;
-	})
+// 	inventory.color.forEach((color) => {
+// 		document.querySelector("#inventory_color").innerHTML += `<div class="slot">
+// 	<div class="colour" style="background-color: ${color}"></div>
+// </div>`;
+// 	})
 }
 
 var char = new URLSearchParams(window.location.search).get("c");
@@ -61,6 +61,11 @@ fetch(`assets/characterSpecific/${char}/${char}.json`).then(async response => {
 	charinfo.general.likes.forEach((likes) => {
 		document.querySelector("#general_likes").innerHTML += `<div class="listitem ${likes[1]}">${likes[0]}.</div>`;
 	})
+	document.querySelector("#general_owner_label").innerHTML = charinfo.general.owners.length > 1 ? "Owners" : "Owner";
+	charinfo.general.owners.forEach((owner) => {
+		document.querySelector("#general_owners").innerHTML += `<a href="${owner[0]}" target="_blank" class="listitem">${owner[1]}</a>`;
+	})
+	
 
 	document.querySelector("#policies_artalone").classList.add(charinfo.policies.artalone);
 	document.querySelector("#policies_artgroup").classList.add(charinfo.policies.artgroup);
@@ -83,4 +88,50 @@ fetch(`assets/characterSpecific/${char}/${char}.json`).then(async response => {
 	charinfo.css.customVars.forEach((arr) => {
 		document.documentElement.style.setProperty(...arr);
 	});
+	generateImageColors(char, charinfo);
 });
+
+var generateImageColors = (char, charinfo) => {
+  var image = new Image();
+	image.src = `assets/characterSpecific/${char}/${char}.png`;
+	console.log(image, image.src)
+  // var file = imgFile.files[0];
+  // var fileReader = new FileReader();
+
+  // fileReader.onload = () => {
+    image.onload = () => {
+      var canvas = document.getElementById("processingCanvas");
+      canvas.width = image.width;
+      canvas.height = image.height;
+      var ctx = canvas.getContext("2d");
+      ctx.drawImage(image, 0, 0);
+
+      var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+			var rgbValues = [];
+			for (let i = 0; i < imageData.data.length; i += 4) {
+				if (imageData.data[i + 3] <= 10) continue;
+				var gran = 8;
+				var rgb = {
+					r: clamp(Math.round(imageData.data[i] / gran) * gran, 0, 255),
+					g: clamp(Math.round(imageData.data[i + 1] / gran) * gran, 0, 255),
+					b: clamp(Math.round(imageData.data[i + 2] / gran) * gran, 0, 255),
+				};
+				rgbValues.push(rgb);
+			}
+			rgbValues = rgbValues.map((v) => "#" + (v.r).toString(16).padStart(2, "0") + (v.g).toString(16).padStart(2, "0") + (v.b).toString(16).padStart(2, "0"));
+			rgbValues = [...new Set(rgbValues)];
+			console.log(rgbValues);
+			document.querySelector("#inventory_syscolors").innerHTML += `<div class="slot">
+	<div class="colour" style="background-color: ${charinfo.general.mainColor}"></div>
+</div>`;
+			document.querySelector("#inventory_syscolors").innerHTML += `<div class="slot">
+	<div class="colour" style="background-color: ${charinfo.trollian.user.color}"></div>
+</div>`;
+			rgbValues.forEach((color) => {
+				document.querySelector("#inventory_color").innerHTML += `<div class="slot">
+	<div class="colour" style="background-color: ${color}"></div>
+</div>`;
+			})
+    }
+  // }
+}

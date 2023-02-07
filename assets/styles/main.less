@@ -7,17 +7,21 @@ body {
   font-family: 'Nunito', sans-serif;
   font-size: 16px;
   display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+a {
+  color: var(--main50);
 }
 
 div.flexparent {
   display: grid;
   grid-template-columns: 400px 1fr 410px;
-  grid-template-rows: 1fr max-content;
+  // grid-template-rows: 1fr fit-content fit-content;
   height: 100vh;
   max-height: 100vh;
   overflow: auto;
@@ -41,11 +45,12 @@ div.flexparent {
     align-content: stretch;
     gap: 8px;
     width: 100%;
+    // height: max-content;
 
     &.general {
       grid-row: 1 / 3;
     }
-    
+
     &.image {
       grid-row: 1 / 1;
       grid-column: 3 / 4;
@@ -54,12 +59,12 @@ div.flexparent {
       background-position: center;
       min-height: 400px;
     }
-    
+
     &.minecraftish {
       grid-row: 2 / 3;
       grid-column: 3 / 4;
     }
-    
+
     &.bottomsheet {
       grid-column: 1 / 4;
     }
@@ -68,114 +73,133 @@ div.flexparent {
 
 div.box {
   display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: stretch;
-	align-content: stretch;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
   padding: 8px;
   border-radius: 8px;
   border: 1px solid var(--main80);
   background-color: var(--main20);
   color: var(--main80);
 
-  & div.name, & div.header {
+  & div.name,
+  & div.header {
     font-size: 24px;
     // font-family: 'Rubik Mono One', sans-serif;
     font-family: 'Krona One', sans-serif;
   }
+
   & div.spacer {
     height: 0px;
     margin: 0 8px;
     border: 1px dashed var(--main40);
   }
+
   & div.vspacer {
     width: 0;
     margin: 8px 0;
     border: 1px dashed var(--main40);
   }
+
   & div.header {
     font-size: 18px;
   }
+
   & div.body {
     margin: 8px;
     white-space: pre-line;
   }
-  & div.widthbox, & div.infobox, & div.checklist, & div.digital {
+
+  & div.widthbox,
+  & div.infobox,
+  & div.checklist,
+  & div.digital {
     display: inline-flex;
     padding: 8px;
     border-radius: 8px;
     font-family: 'Inconsolata', monospace;
     gap: 8px;
-	  flex-direction: row;
-	  flex-wrap: wrap;
-	  justify-content: space-around;
-	  align-items: center;
-	  align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
   }
+
   & div.digital {
     padding: 4px;
   }
-  & div.infobox, & div.checklist, & div.digital {
-	  flex-direction: column;
-	  flex-wrap: nowrap;
-	  justify-content: flex-start;
-	  align-items: stretch;
-	  align-content: stretch;
+
+  & div.infobox,
+  & div.checklist,
+  & div.digital {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
     background-color: var(--main30);
     color: var(--main70);
-    
+
     & div.listitem::before {
       content: "- "
     }
   }
+
   & div.listbox {
     display: inline-flex;
     padding: 8px;
     border-radius: 8px;
     font-family: 'Inconsolata', monospace;
     gap: 8px;
-	  flex-direction: row;
-	  flex-wrap: wrap;
-	  justify-content: flex-start;
-	  align-items: stretch;
-	  align-content: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
 
     &.center {
       align-items: center;
       align-content: center;
     }
   }
+
   & div.checklist {
     background-color: transparent;
     color: var(--main80);
-    
+
     & div.listitem.yes::before {
       content: "You can ";
       color: #0f0;
       font-weight: bold;
     }
+
     & div.listitem.no::before {
       content: "You cannot ";
       color: #f00;
       font-weight: bold;
     }
+
     & div.listitem.ask::before {
       content: "You should ask before you ";
       color: #ff0;
       font-weight: bold;
     }
-    
+
     & div.listitem.likes::before {
       content: "This character likes ";
       color: #0f0;
       font-weight: bold;
     }
+
     & div.listitem.dislikes::before {
       content: "This character does not like ";
       color: #f00;
       font-weight: bold;
     }
+
     & div.listitem.neutral::before {
       content: "This character is indifferent about ";
       color: #ff0;
@@ -185,11 +209,11 @@ div.box {
 
   &.inventory {
     display: flex;
-	  flex-direction: column;
-	  flex-wrap: nowrap;
-	  justify-content: center;
-	  align-items: stretch;
-	  align-content: stretch;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
     gap: 8px;
 
     & div.grid {
@@ -201,24 +225,25 @@ div.box {
       &.main {
         grid-template-rows: repeat(3, auto);
       }
+
       &.hotbar {
         grid-template-rows: auto;
       }
 
       &.flexible {
         display: flex;
-	      flex-wrap: wrap;
-	      align-items: flex-start;
-	      align-content: flex-start;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        align-content: flex-start;
       }
 
       & div.slot {
         display: flex;
-	      flex-direction: row;
-	      flex-wrap: nowrap;
-	      justify-content: center;
-	      align-items: center;
-	      align-content: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
         aspect-ratio: 1 / 1;
         border-radius: 4px;
         min-width: 36px;
@@ -248,29 +273,29 @@ div.hoverlabel {
   background-color: var(--main10);
   color: var(--main90);
   font-family: 'Inconsolata', monospace;
-  
+
   & div.label {
     font-weight: bold;
   }
-  
+
   & div.name {
     color: var(--main50);
   }
 }
 
-@media only screen and (min-width: 1182px){
+@media only screen and (min-width: 1182px) {
   div.flexparent {
     & div.flexbox {
       &.general {
         grid-row: initial;
       }
-  
+
       &.image {
         grid-row: initial;
         grid-column: initial;
         min-width: 300px;
       }
-  
+
       &.minecraftish {
         grid-row: initial;
         grid-column: initial;
@@ -279,11 +304,11 @@ div.hoverlabel {
   }
 }
 
-@media only screen and (max-width: 882px){
+@media only screen and (max-width: 882px) {
   div.flexparent {
     grid-template-columns: 100%;
     grid-template-rows: max-content min-content max-content;
-    
+
     & div.flexbox {
       &.general {
         grid-row: initial;
@@ -303,11 +328,11 @@ div.hoverlabel {
       & div.inventory div.grid div.slot {
         min-width: 0;
       }
-    
+
       &.bottomsheet {
         grid-column: 1 / 2;
       }
     }
   }
-  
+
 }

@@ -43,13 +43,15 @@ async function fetchLabels() {
   
   tag = document.createElement("div");
   tag.innerHTML = `<div class="label"></div>
-<div class="name">minecraft:</div>`;
+<div class="name">minecraft:</div><canvas id="processingCanvas" hidden></canvas>`;
   tag.classList.add("hoverlabel");
   document.body.appendChild(tag);
   tagElements = {
     label: tag.querySelector("div.label"),
     name: tag.querySelector("div.name")
   };
+
+
 
   document.addEventListener('mousemove', event => {
     tag.style.visibility = "hidden";
