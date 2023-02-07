@@ -27,6 +27,11 @@ div.flexparent {
   gap: 4px;
   box-sizing: border-box;
 
+  &.nogrid {
+    display: flex;
+    flex-direction: row;
+  }
+
   & div.flexbox {
     display: flex;
     flex-direction: column;
@@ -54,6 +59,10 @@ div.flexparent {
       grid-row: 2 / 3;
       grid-column: 3 / 4;
     }
+    
+    &.bottomsheet {
+      grid-column: 1 / 4;
+    }
   }
 }
 
@@ -75,28 +84,22 @@ div.box {
     // font-family: 'Rubik Mono One', sans-serif;
     font-family: 'Krona One', sans-serif;
   }
+  & div.spacer {
+    height: 0px;
+    margin: 0 8px;
+    border: 1px dashed var(--main40);
+  }
+  & div.vspacer {
+    width: 0;
+    margin: 8px 0;
+    border: 1px dashed var(--main40);
+  }
   & div.header {
     font-size: 18px;
   }
   & div.body {
     margin: 8px;
     white-space: pre-line;
-  }
-  & div.textClientView {
-    border: 2px inset black;
-    background-color: white;
-    color: black;
-    margin-top: 8px;
-    padding: 8px;
-    display: inline-flex;
-    gap: 4px;
-	  flex-direction: column;
-	  flex-wrap: nowrap;
-	  justify-content: flex-start;
-	  align-items: flex-start;
-	  align-content: flex-start;
-    font-family: "Trollian";
-    font-size: 8px;
   }
   & div.widthbox, & div.infobox, & div.checklist, & div.digital {
     display: inline-flex;
@@ -126,6 +129,23 @@ div.box {
       content: "- "
     }
   }
+  & div.listbox {
+    display: inline-flex;
+    padding: 8px;
+    border-radius: 8px;
+    font-family: 'Inconsolata', monospace;
+    gap: 8px;
+	  flex-direction: row;
+	  flex-wrap: wrap;
+	  justify-content: flex-start;
+	  align-items: stretch;
+	  align-content: stretch;
+
+    &.center {
+      align-items: center;
+      align-content: center;
+    }
+  }
   & div.checklist {
     background-color: transparent;
     color: var(--main80);
@@ -145,6 +165,22 @@ div.box {
       color: #ff0;
       font-weight: bold;
     }
+    
+    & div.listitem.likes::before {
+      content: "This character likes ";
+      color: #0f0;
+      font-weight: bold;
+    }
+    & div.listitem.dislikes::before {
+      content: "This character does not like ";
+      color: #f00;
+      font-weight: bold;
+    }
+    & div.listitem.neutral::before {
+      content: "This character is indifferent about ";
+      color: #ff0;
+      font-weight: bold;
+    }
   }
 
   &.inventory {
@@ -155,12 +191,6 @@ div.box {
 	  align-items: stretch;
 	  align-content: stretch;
     gap: 8px;
-
-    & div.spacer {
-      height: 0px;
-      margin: 0 8px;
-      border: 1px dashed var(--main40);
-    }
 
     & div.grid {
       display: grid;
@@ -272,6 +302,10 @@ div.hoverlabel {
 
       & div.inventory div.grid div.slot {
         min-width: 0;
+      }
+    
+      &.bottomsheet {
+        grid-column: 1 / 2;
       }
     }
   }

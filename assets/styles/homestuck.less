@@ -1,0 +1,95 @@
+div.box {
+  & div.textClientView {
+    border: 2px inset black;
+    background-color: white;
+    color: black;
+    margin-top: 8px;
+    padding: 8px;
+    display: inline-flex;
+    gap: 4px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    font-family: "Trollian";
+    font-size: 8px;
+    overflow: auto;
+  }
+
+  & div.homestuck_moduscard_front, & div.homestuck_moduscard_back, & div.homestuck_clcard {
+    display: inline-block;
+    width: 296px;
+    height: 376px;
+    background-size: contain;
+    background-image: var(--modus-url-front);
+  }
+
+  & div.homestuck_moduscard_back {
+    position: relative;
+    background-image: var(--modus-url-back);
+
+    & div.homestuck_moduscard_back_form {
+      position: absolute;
+      display: flex;
+	    flex-direction: column;
+	    flex-wrap: nowrap;
+	    justify-content: center;
+	    align-items: flex-start;
+      left: 30px;
+      top: 130px;
+      width: 256px;
+      height: 215px;
+      padding: 16px;
+      vertical-align: middle;
+      font-weight: bold;
+      color: white;
+      box-sizing: border-box;
+      // transform-origin: top left;
+      // transform: scale(0.5);
+      & * {
+        text-align: left;
+      }
+
+      & div.textClientView {
+        white-space: pre;
+        font-size: 8px;
+      }
+    }
+  }
+
+  & div.homestuck_clcard {
+    width: 148px;
+    height: 188px;
+    background-image: var(--card-url);
+  }
+
+  & div.generalbox {
+    text-align: left;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    & * {
+      width: 100% !important;
+      box-sizing: border-box;
+    }
+  }
+
+  & div.homestuck_leftbracket {
+    background-image: var(--bracket-url-left);
+    width: 32px;
+    height: 127px;
+  }
+
+  & div.homestuck_rightbracket {
+    background-image: var(--bracket-url-right);
+    width: 32px;
+    height: 127px;
+  }
+
+  & div.homestuck_comma {
+    background-image: var(--comma-url);
+    width: 28px;
+    height: 128px;
+  }
+}

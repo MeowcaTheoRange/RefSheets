@@ -88,6 +88,4 @@ async function fetchLabels() {
   }, true);
 }
 
-setColors("rgb(192, 255, 0)");
-
 fetchLabels();

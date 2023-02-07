@@ -1,0 +1,99 @@
+{
+  "general": {
+    "mainColor": "rgb(165, 255, 0)",
+    "fullName": "Thaero Rhange",
+    "description": [
+      "Thaero is my main OC. He's basically my sona, if I was stupid, dumb, and a troll.",
+      "Sorry, man.",
+      "Anyway, he's basically a grey human, as they say in the Homestuck fandom. ",
+      "I haven't read enough of Act 5+ to really understand the effects of Trolls within the Homestuck universe, but I'm assuming it's quite a bit.",
+      "I don't care, though."
+    ],
+    "age": 17,
+    "pronouns": [
+      ["he", "him"]
+    ],
+    "gender": "Male",
+    "sign": ["Lepio", "Olive"],
+    "species": "Troll",
+    "likes": [
+      ["Gruber", "likes"]
+    ]
+  },
+  "policies": {
+    "artalone": "yes",
+    "artgroup": "yes",
+    "kinning": "no",
+    "shipping": "ask",
+    "fanfiction": "ask"
+  },
+  "modus": {
+    "settings": [
+      "<div><input type=\"checkbox\" name=\"checkbox\" checked> Use syntax from ES6+</div>",
+      "<div><input type=\"checkbox\" name=\"checkbox\" checked> Always mutate array</div>",
+      "<div>&nbsp;</div>",
+      "<div>",
+      "<div>On remove...</div>",
+      "<div><input type=\"radio\" name=\"checkbox\" checked> Eject object</div>",
+      "<div><input type=\"radio\" name=\"checkbox\"> Destroy object</div>",
+      "</div>",
+      "<div>",
+      "<div>On array return...</div>",
+      "<div><input type=\"radio\" name=\"checkbox\" checked> Eject array contents</div>",
+      "<div><input type=\"radio\" name=\"checkbox\"> Stack array contents</div>",
+      "</div>"
+    ],
+    "showcase": [
+      "<div class=\"homestuck_leftbracket\"></div>",
+      "<div class=\"homestuck_clcard\"></div>",
+      "<div class=\"homestuck_comma\"></div>",
+      "<div class=\"homestuck_clcard\"></div>",
+      "<div class=\"homestuck_comma\"></div>",
+      "<div class=\"homestuck_clcard\"></div>",
+      "<div class=\"homestuck_rightbracket\"></div>"
+    ]
+  },
+  "css": {
+    "customVars": [
+      ["--comma-url", "url(/assets/characterSpecific/thaero/comma.png)"],
+      ["--bracket-url-left", "url(/assets/characterSpecific/thaero/bracket_left.png)"],
+      ["--bracket-url-right", "url(/assets/characterSpecific/thaero/bracket_right.png)"]
+    ]
+  },
+  "trollian": {
+    "user": {
+      "name": "untidyFunctions",
+      "color": [113, 160, 32]
+    },
+    "quirks": [
+      ["'", ""],
+      ["\\.\\.\\.[a-zA-Z]+", " [$&]"],
+      ["\\.\\.\\.( |$)", "(...);$1"],
+      ["--", "--;"],
+      ["\\.( |$)", "();$1"],
+      [",( |$)", "();$1"],
+      ["\\?\\?", "(??);"],
+      ["\\?( |$)", "(? :);$1"],
+      ["( |^)([a-zA-Z]+)!", "$1!$2(!);"]
+    ]
+  },
+  "inventory": {
+    "main": [
+      ["string", 3], ["spider-eye", 2], ["bone", 3], ["rotten-flesh", 13], [], [], [], [], ["stick", 16],
+      [], [], [], [], [], [], [], [], ["wooden-pickaxe"],
+      ["iron-pickaxe"], [], [], [], [], [], [], ["oak-planks", 13], ["oak-planks", 64]
+    ],
+    "bar": [
+      ["iron-pickaxe"], ["iron-axe"], ["iron-shovel"], [], [], [], ["sweet-berries", 12], ["sweet-berries", 64], ["sweet-berries", 64]
+    ],
+    "color": [
+      "#2B2B2B",
+      "#FFCC00",
+      "#FFAA00",
+      "#FF8000",
+      "#ADADAD",
+      "#509000",
+      "#434343"
+    ]
+  }
+}

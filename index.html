@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet/less" type="text/css" href="/assets/styles/color.less" />
     <link rel="stylesheet/less" type="text/css" href="/assets/styles/main.less" />
+    <link rel="stylesheet/less" type="text/css" href="/assets/styles/homestuck.less" />
     <link rel="stylesheet" href="/assets/styles/mc/icons-minecraft-0.5.css" type="text/css">
     <script src="https://cdn.jsdelivr.net/npm/less"></script>
     <script src="/assets/scripts/inventory.js" defer></script>
@@ -17,32 +18,28 @@
     <div class="flexparent">
       <div class="flexbox general">
         <div class="box">
-          <div class="name">THAERO RHANGE</div>
-          <div class="body">Also known as <div class="digital">untidyFunctions [UF]</div> online.</div>
-          <div class="body">Thaero is my main OC. He's basically my sona, if I was stupid, dumb, and a troll.
-            Sorry, man.
-            Anyway, he's basically a grey human, as they say in the Homestuck fandom. 
-            I haven't read enough of Act 5+ to really understand the effects of Trolls within the Homestuck universe, but I'm assuming it's quite a bit.
-            I don't care, though.</div>
+          <div class="name" id="general_fullName"></div>
+          <div class="body">Also known as <div class="digital" id="trollian_user_name">untidyFunctions [UF]</div> online.</div>
+          <div class="body" id="general_description"></div>
           <div class="widthbox">
-            <div class="listitem">17 years (7.8 sweeps)</div>
-            <div class="listitem">Pansexual</div>
-            <div class="listitem">Lepio</div>
-            <div class="listitem">Troll (Olive caste)</div>
+            <div class="listitem" id="general_age"></div>
+            <div class="listitem" id="general_sign"></div>
+            <div class="listitem" id="general_species"></div>
+            <div class="listitem" id="general_pronouns"></div>
           </div>
         </div>
         <div class="box">
           <div class="header">POLICIES</div>
           <div class="checklist">
-            <div class="listitem yes">make art of this character</div>
-            <div class="listitem yes">make art of this character with other characters</div>
-            <div class="listitem no">kin this character</div>
-            <div class="listitem no">ship this character with others</div>
-            <div class="listitem ask">create fanfiction of this character</div>
+            <div class="listitem" id="policies_artalone">make art of this character.</div>
+            <div class="listitem" id="policies_artgroup">make art of this character with other characters.</div>
+            <div class="listitem" id="policies_kinning">kin this character.</div>
+            <div class="listitem" id="policies_shipping">ship this character with others.</div>
+            <div class="listitem" id="policies_fanfiction">create fanfiction of this character.</div>
           </div>
         </div>
         <div class="box">
-          <div class="header">TROLLIAN</div>
+          <div class="header">CHAT PROGRAM</div>
           <div class="textClientView">
             <span><trolltag></trolltag> began trolling you.</span>
             <dialogue>This is how my typing style would look like in a pesterlog.</dialogue>
@@ -58,90 +55,10 @@
             <div class="listitem">Name: <div class="digital" id="ItemName">String</div></div>
             <div class="listitem">ID: <div class="digital" id="ItemID">minecraft:string</div></div>
           </div>
-          <div class="grid main">
-            <div class="slot">
-              <div class="icon-minecraft icon-minecraft-string">3</div>
-            </div>
-            <div class="slot">
-              <div class="icon-minecraft icon-minecraft-spider-eye">2</div>
-            </div>
-            <div class="slot">
-              <div class="icon-minecraft icon-minecraft-bone">3</div>
-            </div>
-            <div class="slot">
-              <div class="icon-minecraft icon-minecraft-rotten-flesh">13</div>
-            </div>
-            <div class="slot"></div>
-            <div class="slot"></div>
-            <div class="slot"></div>
-            <div class="slot"></div>
-            <div class="slot">
-              <div class="icon-minecraft icon-minecraft-stick">
-                16
-              </div>
-            </div>
-
-            <div class="slot"></div>
-            <div class="slot"></div>
-            <div class="slot"></div>
-            <div class="slot"></div>
-            <div class="slot"></div>
-            <div class="slot"></div>
-            <div class="slot"></div>
-            <div class="slot"></div>
-            <div class="slot">
-              <div class="icon-minecraft icon-minecraft-wooden-pickaxe"></div>
-            </div>
-
-            <div class="slot">
-              <div class="icon-minecraft icon-minecraft-iron-pickaxe"></div>
-            </div>
-            <div class="slot"></div>
-            <div class="slot"></div>
-            <div class="slot"></div>
-            <div class="slot"></div>
-            <div class="slot"></div>
-            <div class="slot"></div>
-            <div class="slot">
-              <div class="icon-minecraft icon-minecraft-oak-planks">
-                13
-              </div>
-            </div>
-            <div class="slot">
-              <div class="icon-minecraft icon-minecraft-oak-planks">
-                64
-              </div>
-            </div>
+          <div class="grid main" id="inventory_main">
           </div>
           <div class="spacer"></div>
-          <div class="grid hotbar">
-            <div class="slot">
-              <div class="icon-minecraft icon-minecraft-iron-pickaxe"></div>
-            </div>
-            <div class="slot">
-              <div class="icon-minecraft icon-minecraft-iron-axe"></div>
-            </div>
-            <div class="slot">
-              <div class="icon-minecraft icon-minecraft-iron-shovel"></div>
-            </div>
-            <div class="slot"></div>
-            <div class="slot"></div>
-            <div class="slot"></div>
-            <div class="slot">
-              <div class="icon-minecraft icon-minecraft-sweet-berries">
-                12
-              </div>
-            </div>
-            <div class="slot">
-              <div class="icon-minecraft icon-minecraft-sweet-berries">
-                64
-              </div>
-            </div>
-            <div class="slot">
-              <div class="icon-minecraft icon-minecraft-sweet-berries">
-                64
-              </div>
-            </div>
+          <div class="grid hotbar" id="inventory_bar">
           </div>
         </div>
         <div class="box inventory">
@@ -150,30 +67,31 @@
             <div class="listitem">HEX: <div class="digital" id="HexColor">#000000</div></div>
             <div class="listitem">RGB: <div class="digital" id="RGBColor">rgb(0, 0, 0)</div></div>
           </div>
-          <div class="grid flexible">
-            <div class="slot">
-              <div class="colour" style="background-color: #c0ff00"></div>
+          <div class="grid flexible" id="inventory_color">
+          </div>
+        </div>
+      </div>
+      <div class="flexbox bottomsheet">
+        <div class="box">
+          <div class="header">LIKES/DISLIKES</div>
+          <div class="checklist" id="general_likes">
+            
+          </div>
+        </div>
+        <div class="box">
+          <div class="header">FETCH MODUS</div>
+          <div class="widthbox">
+            <div class="listbox">
+              <div class="homestuck_moduscard_front"></div>
+              <div class="vspacer"></div>
+              <div class="homestuck_moduscard_back">
+                <div class="homestuck_moduscard_back_form" id="modus_settings">
+                  
+                </div>
+              </div>
             </div>
-            <div class="slot">
-              <div class="colour" style="background-color: #2b2b2b"></div>
-            </div>
-            <div class="slot">
-              <div class="colour" style="background-color: #FFCC00"></div>
-            </div>
-            <div class="slot">
-              <div class="colour" style="background-color: #FFAA00"></div>
-            </div>
-            <div class="slot">
-              <div class="colour" style="background-color: #ff8000"></div>
-            </div>
-            <div class="slot">
-              <div class="colour" style="background-color: #adadad"></div>
-            </div>
-            <div class="slot">
-              <div class="colour" style="background-color: #509000"></div>
-            </div>
-            <div class="slot">
-              <div class="colour" style="background-color: #434343"></div>
+            <div class="listbox center" id="modus_showcase">
+              
             </div>
           </div>
         </div>
