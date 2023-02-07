@@ -1,3 +1,5 @@
+// Unfinished. Do not touch.
+
 class int_Color {
 	#prefix;
 	#prefixLong;

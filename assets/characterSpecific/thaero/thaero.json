@@ -34,13 +34,13 @@
       "<div>&nbsp;</div>",
       "<div>",
       "<div>On remove...</div>",
-      "<div><input type=\"radio\" name=\"checkbox\" checked> Eject object</div>",
-      "<div><input type=\"radio\" name=\"checkbox\"> Destroy object</div>",
+      "<div><input type=\"radio\" name=\"remove\" checked> Eject object</div>",
+      "<div><input type=\"radio\" name=\"remove\"> Destroy object</div>",
       "</div>",
       "<div>",
       "<div>On array return...</div>",
-      "<div><input type=\"radio\" name=\"checkbox\" checked> Eject array contents</div>",
-      "<div><input type=\"radio\" name=\"checkbox\"> Stack array contents</div>",
+      "<div><input type=\"radio\" name=\"return\" checked> Eject array contents</div>",
+      "<div><input type=\"radio\" name=\"return\"> Stack array contents</div>",
       "</div>"
     ],
     "showcase": [
@@ -79,9 +79,9 @@
   },
   "inventory": {
     "main": [
-      ["string", 3], ["spider-eye", 2], ["bone", 3], ["rotten-flesh", 13], [], [], [], [], ["stick", 16],
+      ["string", 3], ["spider-eye", 2], ["bone", 3], ["rotten-flesh", 13], [], ["stripped-oak-log"], [], [], ["stick", 16],
       [], [], [], [], [], [], [], [], ["wooden-pickaxe"],
-      ["iron-pickaxe"], [], [], [], [], [], [], ["oak-planks", 13], ["oak-planks", 64]
+      ["iron-pickaxe"], [], [], [], [], [], ["oak-planks", 13], ["oak-planks", 64], ["oak-log", 12]
     ],
     "bar": [
       ["iron-pickaxe"], ["iron-axe"], ["iron-shovel"], [], [], [], ["sweet-berries", 12], ["sweet-berries", 64], ["sweet-berries", 64]
@@ -93,7 +93,9 @@
       "#FF8000",
       "#ADADAD",
       "#509000",
-      "#434343"
+      "#434343",
+      "rgb(113, 160, 32)",
+      "rgb(165, 255, 0)"
     ]
   }
 }

@@ -56,6 +56,7 @@ fetch(`/assets/characterSpecific/${char}/${char}.json`).then(async response => {
 	document.querySelector("#general_sign").innerHTML = charinfo.general.sign[0] + " (" + charinfo.general.sign[1] + " caste)";
 	document.querySelector("#general_species").innerHTML = charinfo.general.species;
 	document.querySelector("#general_pronouns").innerHTML = charinfo.general.pronouns.map(x => x.join("/")).join(", ") + ", " + charinfo.general.gender;
+	document.querySelector("#image").style.backgroundImage = `url("/assets/characterSpecific/${char}/${char}.png")`;
 
 	charinfo.general.likes.forEach((likes) => {
 		document.querySelector("#general_likes").innerHTML += `<div class="listitem ${likes[1]}">${likes[0]}.</div>`;
