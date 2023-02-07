@@ -35,7 +35,7 @@ function setColors(col) {
 }
 
 async function fetchLabels() {
-  await fetch('/assets/minecraft-block-and-entity.json').then(async response => {
+  await fetch('assets/minecraft-block-and-entity.json').then(async response => {
     (await response.json()).forEach((x) => {
       minecraftBlocks[x.css] = {label: x.label, name: x.name};
     });

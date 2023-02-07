@@ -55,9 +55,9 @@
   },
   "css": {
     "customVars": [
-      ["--comma-url", "url(/assets/characterSpecific/thaero/comma.png)"],
-      ["--bracket-url-left", "url(/assets/characterSpecific/thaero/bracket_left.png)"],
-      ["--bracket-url-right", "url(/assets/characterSpecific/thaero/bracket_right.png)"]
+      ["--comma-url", "url(assets/characterSpecific/thaero/comma.png)"],
+      ["--bracket-url-left", "url(assets/characterSpecific/thaero/bracket_left.png)"],
+      ["--bracket-url-right", "url(assets/characterSpecific/thaero/bracket_right.png)"]
     ]
   },
   "trollian": {
