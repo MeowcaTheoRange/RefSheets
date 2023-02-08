@@ -21,10 +21,14 @@
     "sign": ["Lepio", "Olive"],
     "species": "Troll",
     "likes": [
-      ["GrKi (Troll GRiZ) and other electronic dance music/funk in general. He finds it very nice", "likes"],
-      ["sleeping", "loves"],
-      ["Gruber", "neutral"],
-      ["Kismetic Dark Seasons (Troll Friday Night Funkin')", "dislikes"]
+      ["GrKi (Troll GRiZ) and other electronic dance music/funk in general. He finds it very nice.", "likes"],
+      ["sleeping.", "loves"],
+      ["Gruber.", "neutral"],
+      ["Kismetic Dark Seasons (Troll Friday Night Funkin').", "dislikes"]
+    ],
+    "facts": [
+      "NO DICK. NO BALLS. (seriosule, he hads no genitals.)",
+      ""
     ]
   },
   "policies": {

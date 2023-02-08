@@ -48,7 +48,7 @@ function generateInventory(inventory) {
 		<div class="icon-minecraft icon-minecraft-${object[0]}">${object[1] ?? ""}</div>
 ` : ""}</div>`;
 	})
-// 	inventory.color.forEach((color) => {
+// 	inventory.color.forEach((color) => {CHANGING_NEGCOLOR
 // 		document.querySelector("#inventory_color").innerHTML += `<div class="slot">
 // 	<div class="colour" style="background-color: ${color}"></div>
 // </div>`;
@@ -71,8 +71,11 @@ fetch(`assets/characterSpecific/${char}/${char}.json`).then(async response => {
 	document.querySelector("#image").style.backgroundImage = `url("assets/characterSpecific/${char}/${char}.png")`;
 
 	charinfo.general.likes.forEach((likes) => {
-		document.querySelector("#general_likes").innerHTML += `<div class="listitem ${likes[1]}">${likes[0]}.</div>`;
-	})
+		document.querySelector("#general_likes").innerHTML += `<div class="listitem ${likes[1]}">${likes[0]}</div>`;
+	});
+	charinfo.general.facts.forEach((fact) => {
+		document.querySelector("#general_facts").innerHTML += `<div class="listitem">${fact}</div>`;
+	});
 	document.querySelector("#general_owner_label").innerHTML = charinfo.general.owners.length > 1 ? "Owners" : "Owner";
 	charinfo.general.owners.forEach((owner) => {
 		document.querySelector("#general_owners").innerHTML += `<a href="${owner[0]}" target="_blank" class="listitem">${owner[1]}</a>`;
@@ -142,8 +145,12 @@ var generateImageColors = (char, charinfo) => {
 			document.querySelector("#inventory_syscolors").innerHTML += `<div class="slot">
 	<div class="colour" style="background-color: ${charinfo.trollian.user.color}"></div>
 </div>`;
+document.querySelector("#inventory_syscolors").innerHTML += `<div class="vspacer"></div>`;
 document.querySelector("#inventory_syscolors").innerHTML += `<div class="slot">
-<div class="colour" style="background-color: ${neg(charinfo.general.mainColor)}"></div>
+<div class="colour" id="CHANGING_CURCOLOR" data-special-text="Current Colour" style="background-color: ${charinfo.general.mainColor}"></div>
+</div>`;
+document.querySelector("#inventory_syscolors").innerHTML += `<div class="slot">
+<div class="colour" id="CHANGING_NEGCOLOR" data-special-text="Negative Current Colour" style="background-color: ${neg(charinfo.general.mainColor)}"></div>
 </div>`;
 			rgbValues.forEach((color) => {
 				document.querySelector("#inventory_color").innerHTML += `<div class="slot">

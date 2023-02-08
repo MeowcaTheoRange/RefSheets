@@ -15,6 +15,10 @@ function setColors(col, label) {
   document.documentElement.style.setProperty(`--${label}80`, ld(col, 60, true));
   document.documentElement.style.setProperty(`--${label}90`, ld(col, 80, true));
   document.documentElement.style.setProperty(`--${label}100`, ld(col, 100, true));
+	if (document.querySelector("#CHANGING_CURCOLOR") && label === "main")
+		document.querySelector("#CHANGING_CURCOLOR").style.backgroundColor = col;
+	else if (document.querySelector("#CHANGING_NEGCOLOR") && label === "sec")
+		document.querySelector("#CHANGING_NEGCOLOR").style.backgroundColor = col;
 }
 
 async function fetchLabels() {
@@ -39,10 +43,18 @@ async function fetchLabels() {
   document.addEventListener('mousemove', event => {
     tag.style.visibility = "hidden";
     var element = [...document.querySelectorAll(':hover')].slice(-1)[0];
-    if (!element.classList.contains("icon-minecraft")) return;
+    if (element.classList.contains("icon-minecraft")) {
   
-    tagElements.label.innerHTML = minecraftBlocks[element.classList[1]].label;
-    tagElements.name.innerHTML = "minecraft:" + minecraftBlocks[element.classList[1]].name;
+      tagElements.label.innerHTML = minecraftBlocks[element.classList[1]].label;
+      tagElements.name.innerHTML = "minecraft:" + minecraftBlocks[element.classList[1]].name;
+
+    } else if (element.classList.contains("colour")) {
+
+      var colors = element.style.backgroundColor.replace(/rgb\(|\)/gm, "").split(", ").map(x => (+x).toString(16).padStart(2, '0')).join("");
+      tagElements.label.innerHTML = "#" + colors;
+      tagElements.name.innerHTML = element.style.backgroundColor + (element.dataset.specialText ? "<br />" + element.dataset.specialText : "");
+
+    } else return;
     
   
     if ((event.clientX + tag.offsetWidth) + 16 >= window.innerWidth)
