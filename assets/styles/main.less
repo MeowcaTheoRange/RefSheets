@@ -15,7 +15,8 @@ body {
 }
 
 a {
-  color: var(--main50);
+  color: var(--sec70);
+  font-weight: bold;
 }
 
 div.flexparent {
@@ -84,6 +85,18 @@ div.box {
   background-color: var(--main20);
   color: var(--main80);
 
+  & details {
+    margin: 8px;
+
+    & summary {
+      cursor: pointer;
+    }
+
+    & > *:not(summary) {
+      margin: -8px;
+    }
+  }
+
   & div.name,
   & div.header {
     font-size: 24px;
@@ -140,8 +153,9 @@ div.box {
     justify-content: flex-start;
     align-items: stretch;
     align-content: stretch;
-    background-color: var(--main30);
-    color: var(--main70);
+    background-color: var(--sec20);
+    color: var(--sec90);
+    margin: 8px;
 
     & div.listitem::before {
       content: "- "
@@ -169,40 +183,53 @@ div.box {
   & div.checklist {
     background-color: transparent;
     color: var(--main80);
+    margin: 0;
 
     & div.listitem.yes::before {
-      content: "You can ";
-      color: #0f0;
+      content: "YES: ";
+      color: var(--pos80);
       font-weight: bold;
     }
 
     & div.listitem.no::before {
-      content: "You cannot ";
-      color: #f00;
+      content: "NO: ";
+      color: var(--neg80);
       font-weight: bold;
     }
 
     & div.listitem.ask::before {
-      content: "You should ask before you ";
-      color: #ff0;
+      content: "ASK: ";
+      color: var(--sec80);
+      font-weight: bold;
+    }
+
+    & div.listitem.loves::before {
+      content: "This character LOVES ";
+      color: var(--pos50);
       font-weight: bold;
     }
 
     & div.listitem.likes::before {
       content: "This character likes ";
-      color: #0f0;
-      font-weight: bold;
-    }
-
-    & div.listitem.dislikes::before {
-      content: "This character does not like ";
-      color: #f00;
+      color: var(--pos80);
       font-weight: bold;
     }
 
     & div.listitem.neutral::before {
       content: "This character is indifferent about ";
-      color: #ff0;
+      color: var(--sec80);
+      font-weight: bold;
+    }
+
+    & div.listitem.dislikes::before {
+      content: "This character dislikes ";
+      color: var(--neg80);
+      font-weight: bold;
+    }
+
+    & div.listitem.hates::before {
+      content: "This character HATES ";
+      color: var(--neg50);
       font-weight: bold;
     }
   }

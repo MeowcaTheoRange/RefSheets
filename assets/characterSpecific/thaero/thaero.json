@@ -13,6 +13,7 @@
       ["https://meowcatheorange.github.io/", "MeowcaTheoRange"]
     ],
     "age": 17,
+    "height": 69,
     "pronouns": [
       ["he", "him"]
     ],
@@ -20,7 +21,10 @@
     "sign": ["Lepio", "Olive"],
     "species": "Troll",
     "likes": [
-      ["Gruber", "likes"]
+      ["GrKi (Troll GRiZ) and other electronic dance music/funk in general. He finds it very nice", "likes"],
+      ["sleeping", "loves"],
+      ["Gruber", "neutral"],
+      ["Kismetic Dark Seasons (Troll Friday Night Funkin')", "dislikes"]
     ]
   },
   "policies": {
@@ -68,22 +72,24 @@
       "name": "untidyFunctions",
       "color": "rgb(113, 160, 32)"
     },
-    "quirks": [
-      ["'", ""],
-      ["\\.\\.\\.[a-zA-Z]+", " [$&]"],
-      ["\\.\\.\\.( |$)", "(...);$1"],
-      ["--", "--;"],
-      ["\\.( |$)", "();$1"],
-      [",( |$)", "();$1"],
-      ["\\?\\?", "(??);"],
-      ["\\?( |$)", "(? :);$1"],
-      ["( |^)([a-zA-Z]+)!", "$1!$2(!);"]
-    ]
+    "quirks": {
+      "regexes": [
+        ["'", ""],
+        ["\\.\\.\\.[a-zA-Z]+", " [$&]"],
+        ["\\.\\.\\.( |$)", "(...);$1"],
+        ["--", "--;"],
+        ["\\.( |$)", "();$1"],
+        [",( |$)", "();$1"],
+        ["\\?\\?", "(??);"],
+        ["\\?( |$)", "(? :);$1"],
+        ["( |^)([a-zA-Z]+)!", "$1!$2(!);"]
+      ]
+    }
   },
   "inventory": {
     "main": [
-      ["string", 3], ["spider-eye", 2], ["bone", 3], ["rotten-flesh", 13], [], ["stripped-oak-log"], [], [], ["stick", 16],
-      [], [], [], [], [], [], [], [], ["wooden-pickaxe"],
+      ["string", 3], [], ["bone", 3], [], [], [], [], [], ["stick", 16],
+      [], [], [], [], [], [], [], [], [],
       ["iron-pickaxe"], [], [], [], [], [], ["oak-planks", 13], ["oak-planks", 64], ["oak-log", 12]
     ],
     "bar": [

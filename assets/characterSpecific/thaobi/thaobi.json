@@ -1,26 +1,28 @@
 {
   "general": {
-    "mainColor": "rgb(255, 184, 0)",
     "fullName": "Thaobi Rhange",
     "description": [
-      "Thaobi is a insane little guy who doesn't know how to stop his tyranny.",
-      "He does a lot of art. Art is kind of his favourite thing ever. His scrawlings are insane, terror-inducing, uhh... pretty good, actually?",
-      "He is a fusion of Obi and Thaero."
+      "Thaobi is a crazy little guy who doesn't know how to stop his tyranny.",
+      "He does a lot of art. Art is kind of his favourite thing ever. His scrawlings are quite terror-inducing and... uhh... pretty good, actually?",
+      "He is a fusion of Obi and Thaero. Because of this, he should have been culled, but for some reason, he wasn't."
     ],
     "owners": [
       ["https://meowcatheorange.github.io/", "MeowcaTheoRange"],
       ["https://twitter.com/obsiv_x", "ObsivX"]
     ],
     "age": 17.5,
+    "height": 64,
     "pronouns": [
-      ["they", "them"]
+      ["they", "them"],
+      ["he", "him"]
     ],
     "gender": "Male",
     "sign": ["???", "Rust-ish"],
     "species": "Troll-human fusion",
     "likes": [
-      ["Gruber", "likes"]
-    ]
+      ["Alfredo-ish grub sauce on pizza.", "loves"]
+    ],
+    "mainColor": "rgb(255, 184, 0)"
   },
   "policies": {
     "artalone": "yes",
@@ -67,16 +69,36 @@
       "name": "untidyArtistry",
       "color": "rgb(119, 89, 10)"
     },
-    "quirks": [
-      ["'", ""],
-      ["\\.", "..."],
-      [",", ",,,"],
-      ["\\?", "?[exc]"],
-      ["!", "!?"],
-      ["\\[exc\\]", "!"],
-      ["^", "🖌️ "],
-      ["$", " 🖌️"]
-    ]
+    "quirks": {
+      "regexes": [
+        ["'", ""],
+        ["\\.", "..."],
+        [",", ",,,"],
+        ["\\?", "?[exc]"],
+        ["!", "!?"],
+        ["\\[exc\\]", "!"],
+        ["^", "🖌️ "],
+        ["$", " 🖌️"]
+      ],
+      "functions": [
+        ["toAllUpperCase"]
+      ]
+    },
+    "quirksQuiet": {
+      "regexes": [
+        ["'", ""],
+        [",", "."],
+        ["\\?", "."],
+        ["!", "."],
+        ["\\[exc\\]", "."],
+        ["\\.+", "."],
+        ["^", "🖌️ "],
+        ["$", " 🖌️"]
+      ],
+      "functions": [
+        ["toLowerCase"]
+      ]
+    }
   },
   "inventory": {
     "main": [

@@ -8,12 +8,23 @@ async function setTrollian(trollian) {
 	})
 	var dialogue = document.querySelectorAll("dialogue");
 	dialogue.forEach((v) => {
-		if (!(v.dataset.quirks == "no" || v.dataset.quirks == "false")) {
-			trollian.quirks.forEach((va) => {
+		if (v.dataset.whispering && trollian.quirksQuiet) {
+			trollian.quirksQuiet.regexes?.forEach((va) => {
 				v.textContent = v.textContent.replace(new RegExp(va[0], "gm"), va[1]);
 			});
+			trollian.quirksQuiet.functions?.forEach((va) => {
+				v.textContent = String.prototype[va[0]].apply(v.textContent, va[1]);
+			});
+		} else {
+			trollian.quirks.regexes?.forEach((va) => {
+				v.textContent = v.textContent.replace(new RegExp(va[0], "gm"), va[1]);
+			});
+			var input = v.textContent;
+			trollian.quirks.functions?.forEach((va) => {
+				input = String.prototype[va[0]].apply(input, va[1]);
+			});
+			v.textContent = input;
 		}
-
 		var trollshort = shortenTrollTag(trollian.user.name);
 		v.style.color = trollian.user.color;
 		v.innerHTML = `${trollshort}: ${v.innerHTML}`;
@@ -44,7 +55,7 @@ function generateInventory(inventory) {
 // 	})
 }
 
-var char = new URLSearchParams(window.location.search).get("c");
+var char = new URLSearchParams(window.location.search).get("c") ?? "thaero";
 fetch(`assets/characterSpecific/${char}/${char}.json`).then(async response => {
 	var charinfo = await response.json();
 	setTrollian(charinfo.trollian);
@@ -56,6 +67,7 @@ fetch(`assets/characterSpecific/${char}/${char}.json`).then(async response => {
 	document.querySelector("#general_sign").innerHTML = charinfo.general.sign[0] + " (" + charinfo.general.sign[1] + " caste)";
 	document.querySelector("#general_species").innerHTML = charinfo.general.species;
 	document.querySelector("#general_pronouns").innerHTML = charinfo.general.pronouns.map(x => x.join("/")).join(", ") + ", " + charinfo.general.gender;
+	document.querySelector("#general_height").innerHTML = Math.floor(charinfo.general.height / 12) + "'" + (charinfo.general.height % 12) + '" (' + (Math.floor((charinfo.general.height / 39.37) * 100) / 100) + "m)";
 	document.querySelector("#image").style.backgroundImage = `url("assets/characterSpecific/${char}/${char}.png")`;
 
 	charinfo.general.likes.forEach((likes) => {
@@ -84,7 +96,10 @@ fetch(`assets/characterSpecific/${char}/${char}.json`).then(async response => {
 	});
 
 	setVariables(char);
-	setColors(charinfo.general.mainColor);
+	setColors(charinfo.general.mainColor, "main");
+	setColors(neg(charinfo.general.mainColor), "sec");
+	setColors("rgb(0, 255, 0)", "pos");
+	setColors("rgb(255, 0, 0)", "neg");
 	charinfo.css.customVars.forEach((arr) => {
 		document.documentElement.style.setProperty(...arr);
 	});
@@ -126,6 +141,9 @@ var generateImageColors = (char, charinfo) => {
 </div>`;
 			document.querySelector("#inventory_syscolors").innerHTML += `<div class="slot">
 	<div class="colour" style="background-color: ${charinfo.trollian.user.color}"></div>
+</div>`;
+document.querySelector("#inventory_syscolors").innerHTML += `<div class="slot">
+<div class="colour" style="background-color: ${neg(charinfo.general.mainColor)}"></div>
 </div>`;
 			rgbValues.forEach((color) => {
 				document.querySelector("#inventory_color").innerHTML += `<div class="slot">
