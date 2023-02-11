@@ -1,0 +1,90 @@
+{
+  "general": {
+    "fullName": "Syreta Roseus",
+    "description": [
+      "Syreta is best described as a \"silly stupid fuckin one-celled organism named shithead.\" Affectionately.",
+      "She is interested in drawing, a feat which she performs pretty well."
+    ],
+    "owners": [
+      ["https://twitter.com/pinko_art", "pink"]
+    ],
+    "age": 16,
+    "height": 61,
+    "pronouns": [
+      ["she", "her"]
+    ],
+    "gender": "Female",
+    "sign": ["Taursci", "Bronze"],
+    "species": "Troll",
+    "likes": [
+      ["drawing.", "loves"],
+      ["pizza.", "hates"]
+    ],
+    "facts": [
+      "Dislikes her glasses",
+      "Clueless 24/7",
+      "The Scrimbloid"
+    ],
+    "mainColor": "rgb(255, 0, 255)"
+  },
+  "css": {
+    "customVars": [
+
+    ]
+  },
+  "policies": {
+    "artalone": "yes",
+    "artgroup": "yes",
+    "kinning": "no",
+    "shipping": "ask",
+    "fanfiction": "ask"
+  },
+  "modus": {
+    "settings": [],
+    "showcase": [
+      "<p>Sorry, gone fishing!</p>"
+    ]
+  },
+  "trollian": {
+    "user": {
+      "name": "artsyRemedy",
+      "color": "rgb(160, 80, 8)"
+    },
+    "quirks": {
+      "regexes": [
+        ["'", ""],
+        ["( |^)i( |$)", "$1I$2"]
+      ],
+      "functions": [
+        ["toLowerCase"], 
+        ["randomReplace", [0.5, "$", " [EMOTICON]"]],
+        ["randomReplace", [0.1, "\\[EMOTICON\\]", ":P"]],
+        ["randomReplace", [0.2, "\\[EMOTICON\\]", ":>"]],
+        ["randomReplace", [0.3, "\\[EMOTICON\\]", ":]"]],
+        ["randomReplace", [0.9, "\\[EMOTICON\\]", ":)"]],
+        ["randomReplace", [1, " \\[EMOTICON\\]", ""]]
+      ]
+    },
+    "quirksQuiet": {
+      "regexes": [
+        ["'", ""],
+        ["^", "("],
+        ["$", ")"],
+        ["( |^)i( |$)", "$1I$2"]
+      ],
+      "functions": [
+        ["toLowerCase"]
+      ]
+    }
+  },
+  "inventory": {
+    "main": [
+      ["writable-book", 64], ["writable-book", 64], ["paper"], ["paper"], [], ["paper", 64], ["yellow-dye", 14], [], ["paper"],
+      [], [], ["paper"], ["paper"], ["paper"], ["paper"], ["paper", 64], [], ["red-dye", 10],
+      ["paper"], ["paper", 64], [], [], [], ["yellow-dye", 9], [], ["paper"], ["paper"]
+    ],
+    "bar": [
+      ["written-book", "Sketchbook"], [], ["poppy", 2], ["dandelion", 9], [], [], [], ["ink-sac", 2], ["ink-sac", 64]
+    ]
+  }
+}

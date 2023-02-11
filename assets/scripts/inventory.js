@@ -45,7 +45,7 @@ async function fetchLabels() {
     var element = [...document.querySelectorAll(':hover')].slice(-1)[0];
     if (element.classList.contains("icon-minecraft")) {
   
-      tagElements.label.innerHTML = minecraftBlocks[element.classList[1]].label;
+      tagElements.label.innerHTML = element.dataset.customname ?? minecraftBlocks[element.classList[1]].label;
       tagElements.name.innerHTML = "minecraft:" + minecraftBlocks[element.classList[1]].name;
 
     } else if (element.classList.contains("colour")) {

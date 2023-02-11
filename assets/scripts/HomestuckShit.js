@@ -9,21 +9,19 @@ async function setTrollian(trollian) {
 	var dialogue = document.querySelectorAll("dialogue");
 	dialogue.forEach((v) => {
 		if (v.dataset.whispering && trollian.quirksQuiet) {
-			trollian.quirksQuiet.regexes?.forEach((va) => {
-				v.textContent = v.textContent.replace(new RegExp(va[0], "gm"), va[1]);
-			});
 			trollian.quirksQuiet.functions?.forEach((va) => {
 				v.textContent = String.prototype[va[0]].apply(v.textContent, va[1]);
 			});
+			trollian.quirksQuiet.regexes?.forEach((va) => {
+				v.textContent = v.textContent.replace(new RegExp(va[0], "gm"), va[1]);
+			});
 		} else {
+			trollian.quirks.functions?.forEach((va) => {
+				v.textContent = String.prototype[va[0]].apply(v.textContent, va[1]);
+			});
 			trollian.quirks.regexes?.forEach((va) => {
 				v.textContent = v.textContent.replace(new RegExp(va[0], "gm"), va[1]);
 			});
-			var input = v.textContent;
-			trollian.quirks.functions?.forEach((va) => {
-				input = String.prototype[va[0]].apply(input, va[1]);
-			});
-			v.textContent = input;
 		}
 		var trollshort = shortenTrollTag(trollian.user.name);
 		v.style.color = trollian.user.color;
@@ -40,12 +38,12 @@ function setVariables(name) {
 function generateInventory(inventory) {
 	inventory.main.forEach((object) => {
 		document.querySelector("#inventory_main").innerHTML += `<div class="slot">${object[0] ? `
-		<div class="icon-minecraft icon-minecraft-${object[0]}">${object[1] ?? ""}</div>
+		<div${object[1] && isNaN(object[1]) ? ` data-customName="${object[1]}"` : ""} class="icon-minecraft icon-minecraft-${object[0]}">${object[1] && !isNaN(object[1]) ? object[1] : ""}</div>
 ` : ""}</div>`;
 	})
 	inventory.bar.forEach((object) => {
 		document.querySelector("#inventory_bar").innerHTML += `<div class="slot">${object[0] ? `
-		<div class="icon-minecraft icon-minecraft-${object[0]}">${object[1] ?? ""}</div>
+		<div${object[1] && isNaN(object[1]) ? ` data-customName="${object[1]}"` : ""} class="icon-minecraft icon-minecraft-${object[0]}">${object[1] && !isNaN(object[1]) ? object[1] : ""}</div>
 ` : ""}</div>`;
 	})
 // 	inventory.color.forEach((color) => {CHANGING_NEGCOLOR

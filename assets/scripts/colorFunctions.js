@@ -46,3 +46,8 @@ String.prototype.toStupidCase = function (mindSpaces) {
   return this.split(" ").map(x => x.split("").map((x, i) => i % 2 === 0 ? x.toLowerCase() : x.toUpperCase()).join("")).join(" ");
   return this.split("").map((x, i) => i % 2 === 0 ? x.toLowerCase() : x.toUpperCase()).join("");
 }
+
+String.prototype.randomReplace = function (weight, regex, replacement) {
+  if (Math.random() < weight) return this.replace(new RegExp(regex, "gm"), replacement);
+  else return this;
+}
