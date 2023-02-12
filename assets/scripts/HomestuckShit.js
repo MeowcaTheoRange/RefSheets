@@ -97,6 +97,7 @@ fetch(`assets/characterSpecific/${char}/${char}.json`).then(async response => {
 		document.querySelector("#modus_showcase").innerHTML += element;
 	});
 
+	await fetchLabels();
 	setVariables(char);
 	setColors(charinfo.general.mainColor, "main");
 	setColors(neg(charinfo.general.mainColor), "sec");
