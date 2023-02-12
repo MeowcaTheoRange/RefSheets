@@ -85,5 +85,3 @@ async function fetchLabels() {
     }
   }, true);
 }
-
-fetchLabels();
