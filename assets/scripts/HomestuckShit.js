@@ -74,7 +74,7 @@ fetch(`assets/characterSpecific/${char}/${char}.json`).then(async response => {
 	charinfo.general.facts.forEach((fact) => {
 		document.querySelector("#general_facts").innerHTML += `<div class="listitem">${fact}</div>`;
 	});
-	document.querySelector("#general_owner_label").innerHTML = charinfo.general.owners.length > 1 ? "Owners" : "Owner";
+	document.querySelector("#general_owner_label").innerHTML = charinfo.general.owners.length > 1 ? "OWNERS" : "OWNER";
 	charinfo.general.owners.forEach((owner) => {
 		document.querySelector("#general_owners").innerHTML += `<a href="${owner[0]}" target="_blank" class="listitem">${owner[1]}</a>`;
 	})

@@ -31,7 +31,7 @@
       "Literally insane.",
       "Forever running."
     ],
-    "mainColor": "rgb(255, 184, 0)"
+    "mainColor": "rgb(253, 0, 0)"
   },
   "policies": {
     "artalone": "yes",
@@ -76,7 +76,7 @@
   "trollian": {
     "user": {
       "name": "untidyArtistry",
-      "color": "rgb(119, 89, 10)"
+      "color": "rgb(168, 0, 0)"
     },
     "quirks": {
       "regexes": [
