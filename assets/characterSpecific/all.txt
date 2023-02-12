@@ -1,4 +1,4 @@
 keelez | KEELEZ BUNBAT
-syreta | SYRETA ROSEUS
-thaero | THAERO RHANGE
 thaobi | THAOBI RHANGE
+thaero | THAERO RHANGE
+syreta | SYRETA ROSEUS
