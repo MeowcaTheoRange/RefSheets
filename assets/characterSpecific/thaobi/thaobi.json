@@ -1,6 +1,7 @@
 {
   "general": {
     "fullName": "Thaobi Rhange",
+    "pronounciation": "thay-oh-bee ray-ng",
     "description": [
       "Thaobi is a troll hatched in a generation victim to GENERATIONAL SPITBOMBING -- an act performed by non-troll species, to cripple an entire generaton of trolls and get them all culled.",
       "Basically, if you aren't a troll, depositing your genetic material in The Bucket will be considered a warcrime.",
@@ -21,7 +22,7 @@
       ["he", "him"]
     ],
     "gender": "Male",
-    "sign": ["???", "Rust-ish"],
+    "sign": ["Armino", "Rust-ish"],
     "species": "Troll-Human",
     "likes": [
       ["Alfredo-ish grub sauce on pizza.", "loves"]

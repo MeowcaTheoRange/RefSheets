@@ -1,0 +1,92 @@
+{
+  "general": {
+    "fullName": "Keelez Bunbat",
+    "pronounciation": "key-lehz boone-baht",
+    "description": [
+      "Keelez is more of a down-low, undercover kind of person. She's not too vocal, hates drama, and would rather stay at home petting her lusus (a leaf-furred screambeast).",
+      "She is <i>ironically</i> <a href=\"?c=thaobi\">Thaobi</a>'s moirail, despite her current beliefs in fate (she thinks it's not real).",
+      "The Caverns? Haven't heard of 'em. Never will."
+    ],
+    "owners": [
+      ["https://meowcatheorange.github.io/", "MeowcaTheoRange"]
+    ],
+    "age": 15.1,
+    "height": 67,
+    "pronouns": [
+      ["she", "her"]
+    ],
+    "gender": "Female",
+    "sign": ["Virsces", "Jade"],
+    "species": "Troll",
+    "likes": [
+      ["timesheet calendars.", "loves"],
+      ["Nixgrub (Troll <a href=\"https://signal.org/en/\" target=\"_blank\">Signal</a>).", "loves"],
+      ["drawers.", "neutral"],
+      ["Grubshell packaging (<a href=\"https://www.plasticingenuity.com/wp-content/uploads/hubfs/Imported_Blog_Media/batteries-packaging.png\"  target=\"_blank\">THIS SHIT</a> BUT IN TROLL SOCIETY).", "hates"]
+    ],
+    "facts": [
+      "Super Lucky",
+      "Well-organized",
+      "Who's Erik?"
+    ],
+    "mainColor": "rgb(13, 222, 118)"
+  },
+  "css": {
+    "customVars": [
+
+    ]
+  },
+  "policies": {
+    "artalone": "yes",
+    "artgroup": "ask",
+    "kinning": "no",
+    "shipping": "no",
+    "fanfiction": "ask"
+  },
+  "modus": {
+    "settings": [
+      "<div>Shift by <input type=\"number\" name=\"shift\" value=\"5\"></div>",
+      "<div>MADE BY KEELEZ BUNBAT DO NOT STEAL</div>",
+      "<div>TO GET THE CARD SAY THE OBFUSCATED NAME</div>",
+      "<div>DO NOT SET TO 0 ITS BUGGY</div>"
+    ],
+    "showcase": [
+      "<div class=\"homestuck_clcard\"></div>",
+      "<div class=\"homestuck_clcard\"></div>",
+      "<div class=\"homestuck_clcard\"></div>",
+      "<div class=\"homestuck_clcard\"></div>"
+    ]
+  },
+  "trollian": {
+    "user": {
+      "name": "obfuscatedProcesses",
+      "color": "rgb(8, 136, 72)"
+    },
+    "quirks": {
+      "regexes": [
+        ["^", "<i>"],
+        ["$", "</i>"]
+      ],
+      "functions": []
+    },
+    "quirksQuiet": {
+      "regexes": [
+        ["^", "<i>"],
+        ["$", "</i>"]
+      ],
+      "functions": [
+        ["toLowerCase"]
+      ]
+    }
+  },
+  "inventory": {
+    "main": [
+      [], [], [], [], [], [], [], [], [],
+      [], [], [], [], ["paper", "I don't play Minecraft."], [], [], [], [], 
+      [], [], [], [], [], [], [], [], []
+    ],
+    "bar": [
+      [], [], [], [], [], [], [], [], []
+    ]
+  }
+}

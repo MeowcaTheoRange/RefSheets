@@ -10,17 +10,17 @@ async function setTrollian(trollian) {
 	dialogue.forEach((v) => {
 		if (v.dataset.whispering && trollian.quirksQuiet) {
 			trollian.quirksQuiet.functions?.forEach((va) => {
-				v.textContent = String.prototype[va[0]].apply(v.textContent, va[1]);
+				v.innerHTML = String.prototype[va[0]].apply(v.innerHTML, va[1]);
 			});
 			trollian.quirksQuiet.regexes?.forEach((va) => {
-				v.textContent = v.textContent.replace(new RegExp(va[0], "gm"), va[1]);
+				v.innerHTML = v.innerHTML.replace(new RegExp(va[0], "gm"), va[1]);
 			});
 		} else {
 			trollian.quirks.functions?.forEach((va) => {
-				v.textContent = String.prototype[va[0]].apply(v.textContent, va[1]);
+				v.innerHTML = String.prototype[va[0]].apply(v.innerHTML, va[1]);
 			});
 			trollian.quirks.regexes?.forEach((va) => {
-				v.textContent = v.textContent.replace(new RegExp(va[0], "gm"), va[1]);
+				v.innerHTML = v.innerHTML.replace(new RegExp(va[0], "gm"), va[1]);
 			});
 		}
 		var trollshort = shortenTrollTag(trollian.user.name);
@@ -67,6 +67,7 @@ fetch(`assets/characterSpecific/${char}/${char}.json`).then(async response => {
 	document.querySelector("#general_pronouns").innerHTML = charinfo.general.pronouns.map(x => x.join("/")).join(", ") + ", " + charinfo.general.gender;
 	document.querySelector("#general_height").innerHTML = Math.floor(charinfo.general.height / 12) + "'" + (charinfo.general.height % 12) + '" (' + (Math.floor((charinfo.general.height / 39.37) * 100) / 100) + "m)";
 	document.querySelector("#image").style.backgroundImage = `url("assets/characterSpecific/${char}/${char}.png")`;
+	document.querySelector("#general_pronounciation").innerHTML = charinfo.general.pronounciation;
 
 	charinfo.general.likes.forEach((likes) => {
 		document.querySelector("#general_likes").innerHTML += `<div class="listitem ${likes[1]}">${likes[0]}</div>`;

@@ -45,7 +45,7 @@ async function fetchLabels() {
     var element = [...document.querySelectorAll(':hover')].slice(-1)[0];
     if (element.classList.contains("icon-minecraft")) {
   
-      tagElements.label.innerHTML = element.dataset.customname ?? minecraftBlocks[element.classList[1]].label;
+      tagElements.label.innerHTML = element.dataset.customname ? `<i>${element.dataset.customname}</i>` : minecraftBlocks[element.classList[1]].label;
       tagElements.name.innerHTML = "minecraft:" + minecraftBlocks[element.classList[1]].name;
 
     } else if (element.classList.contains("colour")) {
@@ -79,7 +79,7 @@ async function fetchLabels() {
       setColors(col, "main");
       setColors(neg(col), "sec");
     } else if (element.classList.contains("icon-minecraft")) {
-      document.querySelector("#ItemName").innerHTML = minecraftBlocks[element.classList[1]].label;
+      document.querySelector("#ItemName").innerHTML = element.dataset.customname ? `<i>${element.dataset.customname}</i> (${minecraftBlocks[element.classList[1]].label})` : minecraftBlocks[element.classList[1]].label;
       document.querySelector("#ItemID").innerHTML = "minecraft:" + minecraftBlocks[element.classList[1]].name;
 
     }
