@@ -1,0 +1,97 @@
+{
+  "general": {
+    "fullName": "Lotine Restej",
+    "pronounciation": "low-teen rest-edge",
+    "description": [
+      "He’s moirails with a robot who has memory issues. They have a small friend group where they arrange small activities together. Usually sleepovers. System was in charge of a sleepover, with his help to help the man remember the plans. This does end up resulting in his death. "
+    ],
+    "owners": [
+      ["https://instagram.com/steamjunk23?igshid=YmMyMTA2M2Y=", "Earl Grey"]
+    ],
+    "age": 17.4,
+    "height": 81,
+    "pronouns": [
+      ["he", "him"]
+    ],
+    "gender": "Male",
+    "sign": ["Capricen", "Purple"],
+    "species": "Troll",
+    "likes": [
+      ["jokes", "likes"],
+      ["apples", "likes"],
+      ["honking", "likes"],
+      ["his moirail", "likes"],
+      ["making others happy", "likes"]
+    ],
+    "facts": [
+      "Lotine is short for guillotine",
+      "Gentle Giant",
+      "Prefers traditional \"clown methods\""
+    ],
+    "mainColor": "rgb(138, 0, 230)"
+  },
+  "css": {
+    "customVars": [
+      ["--goal-card-url", "url(assets/characterSpecific/lotine/goal.png)"]
+    ]
+  },
+  "policies": {
+    "artalone": "yes",
+    "artgroup": "yes",
+    "kinning": "ask",
+    "shipping": "ask",
+    "fanfiction": "yes"
+  },
+  "modus": {
+    "settings": [
+      "<div><input type=\"checkbox\" name=\"gambit\" checked> Queen's Gambit - Don't get correct card, it loses its head</div>"
+    ],
+    "showcase": [
+      "<div class=\"homestuck_clcard\"></div>",
+      "<div class=\"homestuck_clcard\"></div>",
+      "<div class=\"homestuck_clcard\"></div>",
+      "<div class=\"homestuck_goal\"></div>"
+    ]
+  },
+  "trollian": {
+    "user": {
+      "name": "carnivalAxe",
+      "color": "#520088"
+    },
+    "quirks": {
+      "regexes": [
+        ["oo", "o"],
+        ["o", "oSo"]
+      ],
+      "functions": []
+    },
+    "quirksQuiet": {
+      "regexes": [
+        ["oo", "o"],
+        ["o", "oso"]
+      ],
+      "functions": [
+      ]
+    }
+  },
+  "colors": [
+    "#efe8ea",
+    "#000000",
+    "#e4c5f3",
+    "#520089",
+    "#3f3e3c",
+    "#a60803",
+    "#f6a023",
+    "#f8c51e"
+  ],
+  "inventory": {
+    "main": [
+      ["golden-axe"], ["iron-axe"], [], [], ["purple-candle"], [], [], ["axolotl-bucket", "System"], ["tropical-fish-bucket"],
+      [], [], [], ["golden-apple"], [], ["poisonous-potato", 3], [], [], [], 
+      ["amethyst-shard", 6], ["ghast-tear", 6], [], [], ["totem-of-undying"], [], [], ["dragon-breath"], ["nether-star"]
+    ],
+    "bar": [
+      [], [], [], [], [], [], [], [], []
+    ]
+  }
+}

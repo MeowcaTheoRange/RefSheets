@@ -106,7 +106,23 @@ fetch(`assets/characterSpecific/${char}/${char}.json`).then(async response => {
 	charinfo.css.customVars.forEach((arr) => {
 		document.documentElement.style.setProperty(...arr);
 	});
-	generateImageColors(char, charinfo);
+	if (charinfo.colors)
+		placeColors(charinfo.colors);
+	else generateImageColors(char, charinfo);
+	
+	document.querySelector("#inventory_syscolors").innerHTML += `<div class="slot">
+	<div class="colour" style="background-color: ${charinfo.general.mainColor}"></div>
+</div>`;
+	document.querySelector("#inventory_syscolors").innerHTML += `<div class="slot">
+	<div class="colour" style="background-color: ${charinfo.trollian.user.color}"></div>
+</div>`;
+	document.querySelector("#inventory_syscolors").innerHTML += `<div class="vspacer"></div>`;
+	document.querySelector("#inventory_syscolors").innerHTML += `<div class="slot">
+	<div class="colour" id="CHANGING_CURCOLOR" data-special-text="Current Colour" style="background-color: ${charinfo.general.mainColor}"></div>
+</div>`;
+	document.querySelector("#inventory_syscolors").innerHTML += `<div class="slot">
+	<div class="colour" id="CHANGING_NEGCOLOR" data-special-text="Negative Current Colour" style="background-color: ${neg(charinfo.general.mainColor)}"></div>
+</div>`;
 });
 
 var generateImageColors = (char, charinfo) => {
@@ -139,24 +155,15 @@ var generateImageColors = (char, charinfo) => {
 			rgbValues = rgbValues.map((v) => "#" + (v.r).toString(16).padStart(2, "0") + (v.g).toString(16).padStart(2, "0") + (v.b).toString(16).padStart(2, "0"));
 			rgbValues = [...new Set(rgbValues)];
 			console.log(rgbValues);
-			document.querySelector("#inventory_syscolors").innerHTML += `<div class="slot">
-	<div class="colour" style="background-color: ${charinfo.general.mainColor}"></div>
-</div>`;
-			document.querySelector("#inventory_syscolors").innerHTML += `<div class="slot">
-	<div class="colour" style="background-color: ${charinfo.trollian.user.color}"></div>
-</div>`;
-document.querySelector("#inventory_syscolors").innerHTML += `<div class="vspacer"></div>`;
-document.querySelector("#inventory_syscolors").innerHTML += `<div class="slot">
-<div class="colour" id="CHANGING_CURCOLOR" data-special-text="Current Colour" style="background-color: ${charinfo.general.mainColor}"></div>
-</div>`;
-document.querySelector("#inventory_syscolors").innerHTML += `<div class="slot">
-<div class="colour" id="CHANGING_NEGCOLOR" data-special-text="Negative Current Colour" style="background-color: ${neg(charinfo.general.mainColor)}"></div>
-</div>`;
-			rgbValues.forEach((color) => {
-				document.querySelector("#inventory_color").innerHTML += `<div class="slot">
-	<div class="colour" style="background-color: ${color}"></div>
-</div>`;
-			})
+			placeColors(rgbValues);
     }
   // }
+}
+
+function placeColors (rgbValues) {
+	rgbValues.forEach((color) => {
+		document.querySelector("#inventory_color").innerHTML += `<div class="slot">
+	<div class="colour" style="background-color: ${color}"></div>
+</div>`;
+	})
 }
