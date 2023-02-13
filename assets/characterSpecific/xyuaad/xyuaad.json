@@ -1,0 +1,93 @@
+{
+  "general": {
+    "fullName": "XYUAAD KLEUFI",
+    "pronounciation": "zyu-odd clue-fee",
+    "description": [
+      "Goldblood fashion star and influencer, brought to the importance of a Blueblood through her wealth and social status. She finds all of it tiring and occasionally wishes she didnt have anything to do with fashion."
+    ],
+    "owners": [
+      ["https://twitter.com/VarcanOctave", "Varcan"]
+    ],
+    "age": 17.4,
+    "height": 75,
+    "pronouns": [
+      ["she", "her"]
+    ],
+    "gender": "Female",
+    "sign": ["Gemlo", "Gold"],
+    "species": "Troll",
+    "likes": [
+      ["cake.", "loves"],
+      ["hexagons.", "loves"],
+      ["talking to fans that aren't highbloods.", "loves"],
+      ["geometric shapes.", "likes"],
+      ["honey.", "likes"],
+      ["anything sweet.", "likes"],
+      ["grubsauce.", "dislikes"],
+      ["snow.", "dislikes"],
+      ["bland food.", "hates"]
+    ],
+    "facts": [
+      "Hexagon glasses are entirely for looks",
+      "Blocks any fans above the blue caste",
+      "Only likes ONE highblood in the indigo caste"
+    ],
+    "mainColor": "rgb(56, 168, 72)"
+  },
+  "css": {
+    "customVars": [
+
+    ]
+  },
+  "policies": {
+    "artalone": "yes",
+    "artgroup": "yes",
+    "kinning": "yes",
+    "shipping": "yes",
+    "fanfiction": "ask"
+  },
+  "modus": {
+    "settings": [
+      "<div><input type=\"checkbox\" name=\"collide\" checked> Detect Collisions</div>",
+      "<div><input type=\"checkbox\" name=\"multiples\" checked> Allow Multiples</div>"
+    ],
+    "showcase": [
+      "<div class=\"homestuck_clcard\"></div>",
+      "<div class=\"homestuck_clcard\"></div>",
+      "<div class=\"homestuck_clcard\"></div>",
+      "<div class=\"homestuck_clcard\"></div>"
+    ]
+  },
+  "trollian": {
+    "user": {
+      "name": "systemicDownfalls",
+      "color": "#DED717"
+    },
+    "quirks": {
+      "regexes": [
+        ["S|s", "$$"],
+        ["E|e", "6"],
+        ["\\.", ""]
+      ],
+      "functions": []
+    },
+    "quirksQuiet": {
+      "regexes": [
+        ["S|s", "$$"],
+        ["e", "6"],
+        ["\\.", ""]
+      ],
+      "functions": []
+    }
+  },
+  "inventory": {
+    "main": [
+      [], [], [], [], [], [], [], ["cake"], ["pumpkin-pie"],
+      [], [], [], [], [], [], [], [], [], 
+      [], [], [], [], [], [], [], [], []
+    ],
+    "bar": [
+      ["iron-axe"], ["iron-pickaxe"], [], [], [], [], [], ["honey-bottle"], ["cooked-porkchop", 32]
+    ]
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "general": {
+    "fullName": "SIXLTR NAMERS",
+    "pronounciation": "Six-letter namers",
+    "description": [
+      ""
+    ],
+    "owners": [
+      ["url", ""]
+    ],
+    "age": 0,
+    "height": 0,
+    "pronouns": [
+      ["", ""]
+    ],
+    "gender": "",
+    "sign": ["", ""],
+    "species": "Troll",
+    "likes": [
+      ["", "likes"]
+    ],
+    "facts": [
+    ],
+    "mainColor": "rgb(127, 127, 127)"
+  },
+  "css": {
+    "customVars": [
+
+    ]
+  },
+  "policies": {
+    "artalone": "yes",
+    "artgroup": "ask",
+    "kinning": "no",
+    "shipping": "no",
+    "fanfiction": "ask"
+  },
+  "modus": {
+    "settings": [
+      "<div>Shift by <input type=\"number\" name=\"shift\" value=\"5\"></div>",
+      "<div>MADE BY KEELEZ BUNBAT DO NOT STEAL</div>",
+      "<div>TO GET THE CARD SAY THE OBFUSCATED NAME</div>",
+      "<div>DO NOT SET TO 0 ITS BUGGY</div>"
+    ],
+    "showcase": [
+      "<div class=\"homestuck_clcard\"></div>",
+      "<div class=\"homestuck_clcard\"></div>",
+      "<div class=\"homestuck_clcard\"></div>",
+      "<div class=\"homestuck_clcard\"></div>"
+    ]
+  },
+  "trollian": {
+    "user": {
+      "name": "eW",
+      "color": "rgb(127, 127, 127)"
+    },
+    "quirks": {
+      "regexes": [
+      ],
+      "functions": []
+    },
+    "quirksQuiet": {
+      "regexes": [
+      ],
+      "functions": [
+      ]
+    }
+  },
+  "inventory": {
+    "main": [
+      [], [], [], [], [], [], [], [], [],
+      [], [], [], [], [], [], [], [], [], 
+      [], [], [], [], [], [], [], [], []
+    ],
+    "bar": [
+      [], [], [], [], [], [], [], [], []
+    ]
+  }
+}

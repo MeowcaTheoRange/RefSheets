@@ -87,6 +87,12 @@ div.box {
   background-color: var(--main20);
   color: var(--main80);
 
+  &.secondary {
+    border: 1px solid var(--sec80);
+    background-color: var(--sec20);
+    color: var(--sec80);
+  }
+
   & div.name,
   & div.header {
     font-size: 24px;
@@ -122,10 +128,6 @@ div.box {
   & div.digital {
     padding: 4px;
   }
-
-  & a {
-    width: max-content;
-  }
   & div.checklist {
     flex-direction: row;
     flex-wrap: wrap;
@@ -136,10 +138,14 @@ div.box {
     color: var(--main80);
     margin: 0;
 
+    & a {
+      width: max-content;
+      text-decoration: none;
+    }
+
     & div.profileitem {
       width: 340px;
       height: 500px;
-      gap: 8px;
       display: flex;
 	    flex-direction: column;
 	    flex-wrap: wrap;

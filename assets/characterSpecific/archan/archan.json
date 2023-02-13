@@ -1,0 +1,241 @@
+{
+  "general": {
+    "fullName": "ARCHAN SCURRA",
+    "pronounciation": "ark-can skur-ra",
+    "description": [
+      "Friendly and jovial, Archan is a dedicated and passionate playwright, adapting many archaic and outdated plays into a much easier to preform state. She holds performances to high regard, and finds the current system to be both unnecessary and useless. Uses his position on the hemospectrum to get away with a variety of vaguely treasonous activities, most of which involve severely neglecting her murdering duties in favour of putting on even more plays. Treats all trolls with same respect, and is more than happy to ramble on about the history of theatre if asked. While her goal was initially selfish, simply wanting her rather niche plays to reach a larger audience by ignoring caste restrictions became a genuine compassion for the art and a disregard for the system."
+    ],
+    "owners": [
+      [
+        "https://toyhou.se/BeetrootBot",
+        "BeetrootBot"
+      ]
+    ],
+    "age": 17.4,
+    "height": 67,
+    "pronouns": [
+      [
+        "he",
+        "him"
+      ],
+      [
+        "she",
+        "her"
+      ],
+      [
+        "they",
+        "them"
+      ]
+    ],
+    "gender": "Female",
+    "sign": [
+      "Caprira",
+      "Purple"
+    ],
+    "species": "Troll",
+    "likes": [
+      [
+        "acting.",
+        "likes"
+      ],
+      [
+        "theatre.",
+        "likes"
+      ],
+      [
+        "history.",
+        "likes"
+      ],
+      [
+        "entertaining folk.",
+        "likes"
+      ],
+      [
+        "the Empire.",
+        "dislikes"
+      ],
+      [
+        "restrictions.",
+        "dislikes"
+      ],
+      [
+        "not being taken seriously.",
+        "dislikes"
+      ]
+    ],
+    "facts": [
+      "Almost obsessively informed about Old-Alternian theatre and entertainment.",
+      "Knows almost all plays written in þe olde era by heart.",
+      "Will drop practically everything to speak of said plays.",
+      "Archan is derived from the word \"archetype\", whereas Scurra is simply latin for jester. Combined, his name means \"Jester Archetype\" which is prevelant in both their role as comic relief, and also their entire aesthetic and job."
+    ],
+    "mainColor": "rgb(116, 64, 194)"
+  },
+  "css": {
+    "customVars": [
+      [
+        "--happy-card-url",
+        "url(assets/characterSpecific/archan/card0.png)"
+      ],
+      [
+        "--sad-card-url",
+        "url(assets/characterSpecific/archan/card1.png)"
+      ]
+    ]
+  },
+  "policies": {
+    "artalone": "yes",
+    "artgroup": "yes",
+    "kinning": "yes",
+    "shipping": "yes",
+    "fanfiction": "yes"
+  },
+  "modus": {
+    "settings": [
+      "<div><input type=\"checkbox\" name=\"collide\" checked> EMOTIONAL ACTING...</div>"
+    ],
+    "showcase": [
+      "<div class=\"homestuck_happycard\"></div>",
+      "<div class=\"homestuck_sadcard\"></div>"
+    ]
+  },
+  "colors": [
+    "#440A7F",
+    "#151515",
+    "#F8E13C",
+    "#FFFFFF",
+    "#C4C4C4",
+    "#898989",
+    "#FF4200",
+    "#FF9000",
+    "#FFB929",
+    "#99004D"
+  ],
+  "trollian": {
+    "user": {
+      "name": "theaterMenace",
+      "color": "#4E2A84"
+    },
+    "quirks": {
+      "regexes": [
+        [
+          "This is how my typing style would look like in a pesterlog\\.",
+          "Therin is howeth mine typyng forme wouldst\nlooke upon a pesterlogue."
+        ],
+        [
+          "This is also a great place to put online information \\(like my username\\) into!",
+          "Therin is too a most wondrous lodging\nto putteth online inf'rmation (like\nmine own us'rname) into!"
+        ],
+        [
+          "Insanity\\?\\? Insane\\? What! No way\\. I can't believe it\\.",
+          "Insanity?? Madness? What! Nay. I shan't\nbelieveth 't."
+        ],
+        [
+          "The quick brown fox jumped over the lazy dog\\.",
+          "The quick browne fox did jump ov'r the dis-\ntemperate dog."
+        ],
+        [
+          "My girl wove six dozen plaid jackets before she quit\\.",
+          "Mine own lady did weave six dozen plaid jackets bef're she did quite"
+        ],
+        [
+          "Sphinx of black quartz, judge my vow\\.",
+          "Sfinx of dark quartz, judgeth mine own vowe."
+        ]
+      ],
+      "functions": []
+    },
+    "quirksQuiet": {
+      "regexes": [],
+      "functions": []
+    }
+  },
+  "inventory": {
+    "main": [
+      [],
+      [
+        "dirt",
+        64
+      ],
+      [
+        "apple"
+      ],
+      [
+        "bamboo",
+        12
+      ],
+      [
+        "oak-log",
+        2
+      ],
+      [
+        "wheat-seeds"
+      ],
+      [
+        "oak-sapling",
+        2
+      ],
+      [
+        "dirt",
+        16
+      ],
+      [
+        "spruce-log",
+        3
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+        "cobblestone"
+      ],
+      [
+        "sand",
+        43
+      ],
+      [],
+      [
+        "wooden-hoe"
+      ],
+      [],
+      [
+        "stone-button",
+        3
+      ],
+      [],
+      [],
+      []
+    ],
+    "bar": [
+      [
+        "iron-axe"
+      ],
+      [
+        "stone-pickaxe"
+      ],
+      [
+        "shears"
+      ],
+      [],
+      [
+        "stone-shovel"
+      ],
+      [],
+      [
+        "writable-book"
+      ],
+      [
+        "compass"
+      ],
+      [
+        "spyglass"
+      ]
+    ]
+  }
+}

@@ -1,5 +1,5 @@
 setColors("rgb(127, 127, 127)", "main");
-setColors(neg("rgb(127, 127, 127)"), "sec");
+setColors("rgb(255, 0, 0)", "sec");
 setColors("rgb(0, 255, 0)", "pos");
 setColors("rgb(255, 0, 0)", "neg");
 
