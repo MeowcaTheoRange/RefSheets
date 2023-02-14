@@ -3,9 +3,11 @@
     "fullName": "Keelez Bunbat",
     "pronounciation": "key-lehz boone-baht",
     "description": [
-      "Keelez is more of a down-low, undercover kind of person. She's not too vocal, hates drama, and would rather stay at home petting her lusus (a leaf-furred screambeast).",
+      "Keelez is known to be quite down-low, not the type to start drama, who would rather stay at home petting her lusus (a leaf-furred screambeast) over going out to socialize.",
       "She is <a href=\"?c=thaobi\">Thaobi</a>'s moirail, possibly because her current beliefs in fate (she thinks it's not real).",
-      "The Caverns? Haven't heard of 'em. Never will."
+      "Her obsession with privacy and freedom-oriented software in general is admirable (by Thaobi). It stemmed from her discovering Thaobi isn't that technology-versed, and as such, he kept giving in to applications that were nothing but ways to get user data. This compromised him in many ways, with his name, some of his passwords, date of hatching, and general preferences being known by the Alternian government.",
+      "This motivated Keelez to find some software that was truly private -- no backdoors, no way to even try to cough up user information to the government -- only simple, secure usage.",
+      "As such, she easily got sucked into the growing open-source software scene. And now she's opting for much of these solutions for herself, as well."
     ],
     "owners": [
       ["https://meowcatheorange.github.io/", "MeowcaTheoRange"]
@@ -25,9 +27,12 @@
       ["Grubshell packaging (<a href=\"https://www.plasticingenuity.com/wp-content/uploads/hubfs/Imported_Blog_Media/batteries-packaging.png\"  target=\"_blank\">THIS SHIT</a> BUT IN TROLL SOCIETY).", "hates"]
     ],
     "facts": [
-      "Super Lucky",
-      "Well-organized",
-      "Who's Erik?"
+      "Thinks KDE is cool",
+      "Too privacy-concerned for her own good",
+      "Fucking Grubble",
+      "Not very good posture",
+      "Obsessively organizes her files into small folders",
+      "Module lover"
     ],
     "mainColor": "rgb(13, 222, 118)"
   },
